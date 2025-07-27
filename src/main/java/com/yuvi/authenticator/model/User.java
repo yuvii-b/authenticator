@@ -38,10 +38,10 @@ public class User implements UserDetails {
     @Column(name = "verification_expiration")
     private LocalDateTime verificationCodeExpiresAt;
 
-    public User(long id, String password, String username) {
-        this.id = id;
-        this.password = password;
+    public User(String username, String email, String password) {
         this.username = username;
+        this.email = email;
+        this.password = password;
     }
 
     @Override
